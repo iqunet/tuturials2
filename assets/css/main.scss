@@ -5,8 +5,24 @@
 
 .page__content {
   p, ul, dl {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    margin-top: 1em;
   }
+  img {
+    margin-top: 1em;
+  }
+}
+
+figcaption {
+  margin-bottom: 1em;
+}
+
+h3 {
+  margin-top: 1em;
+}
+
+hr {
+  border-top: 3px solid #80808063;
 }
 
 .toc {
@@ -15,10 +31,9 @@
   }
 }
 
-.highlighter-rouge {
-  div {
-    font-size: 1em;
-  }
+.highlighter-rouge div {
+  font-size: .85em;
+  margin-top: 1.5em;
 }
 
 .author__avatar {

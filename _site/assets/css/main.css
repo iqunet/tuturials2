@@ -1291,11 +1291,18 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
   .page__hero-caption a { color: #000 !important; }
   /* Hide the following elements on print ========================================================================== */
   .masthead, .toc, .page__share, .page__related, .pagination, .ads, .page__footer, .page__comments-form, .author__avatar, .author__content, .author__urls-wrapper, .nav__list, .sidebar, .adsbygoogle { display: none !important; height: 1px !important; } }
-.page__content p, .page__content ul, .page__content dl { font-size: 0.8rem; }
+.page__content p, .page__content ul, .page__content dl { font-size: 0.75rem; margin-top: 1em; }
+.page__content img { margin-top: 1em; }
+
+figcaption { margin-bottom: 1em; }
+
+h3 { margin-top: 1em; }
+
+hr { border-top: 3px solid #80808063; }
 
 .toc ul { font-size: 0.7rem; }
 
-.highlighter-rouge div { font-size: 1em; }
+.highlighter-rouge div { font-size: .85em; margin-top: 1.5em; }
 
 .author__avatar img { border-radius: 0; border: 0; }
 
