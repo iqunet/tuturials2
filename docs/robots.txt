@@ -1,1 +1,1 @@
-Sitemap: /tutorials/sitemap.xml
+Sitemap: /tuturials2/sitemap.xml
