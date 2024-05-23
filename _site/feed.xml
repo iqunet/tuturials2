@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-05-23T12:13:37-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">iQunet Tutorials: OPC-UA | MQTT | Modbus | LoRaWAN</title><subtitle>iQunet offers ready-to-use products for your digitalization projects, ensuring a quick rollout of your monitoring solutions.  We also support custom engineering requests to meet your specific needs.</subtitle><author><name>{&quot;avatar&quot;=&gt;&quot;/assets/images/iqunet_logo_bgwhite.svg&quot;, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;iQunet.com&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-house&quot;, &quot;url&quot;=&gt;&quot;https://iqunet.com&quot;}, {&quot;label&quot;=&gt;&quot;LinkedIn&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-linkedin&quot;, &quot;url&quot;=&gt;&quot;https://linkedin.com/company/iqunet/&quot;}, {&quot;label&quot;=&gt;&quot;YouTube&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-youtube&quot;, &quot;url&quot;=&gt;&quot;https://www.youtube.com/channel/UCOPGTm7iW8Xh6ZJP8UBq_nQ&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;, &quot;url&quot;=&gt;&quot;https://github.com/iqunet&quot;}]}</name></author><entry><title type="html">Private LoRaWAN to OPC-UA</title><link href="http://0.0.0.0:4000/blog/connecting-sensors-opcua/" rel="alternate" type="text/html" title="Private LoRaWAN to OPC-UA" /><published>2024-05-19T15:10:15-05:00</published><updated>2024-05-19T15:10:15-05:00</updated><id>http://0.0.0.0:4000/blog/connecting-sensors-opcua</id><content type="html" xml:base="http://0.0.0.0:4000/blog/connecting-sensors-opcua/"><![CDATA[<h3 id="mission-lorawan-temperature-data-to-python-graph">Mission: LoRaWAN Temperature Data to Python Graph</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="/tuturials2/feed.xml" rel="self" type="application/atom+xml" /><link href="/tuturials2/" rel="alternate" type="text/html" /><updated>2024-05-23T12:15:48-05:00</updated><id>/tuturials2/feed.xml</id><title type="html">iQunet Tutorials: OPC-UA | MQTT | Modbus | LoRaWAN</title><subtitle>iQunet offers ready-to-use products for your digitalization projects, ensuring a quick rollout of your monitoring solutions.  We also support custom engineering requests to meet your specific needs.</subtitle><author><name>{&quot;avatar&quot;=&gt;&quot;/assets/images/iqunet_logo_bgwhite.svg&quot;, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;iQunet.com&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-house&quot;, &quot;url&quot;=&gt;&quot;https://iqunet.com&quot;}, {&quot;label&quot;=&gt;&quot;LinkedIn&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-linkedin&quot;, &quot;url&quot;=&gt;&quot;https://linkedin.com/company/iqunet/&quot;}, {&quot;label&quot;=&gt;&quot;YouTube&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-youtube&quot;, &quot;url&quot;=&gt;&quot;https://www.youtube.com/channel/UCOPGTm7iW8Xh6ZJP8UBq_nQ&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;, &quot;url&quot;=&gt;&quot;https://github.com/iqunet&quot;}]}</name></author><entry><title type="html">Private LoRaWAN to OPC-UA</title><link href="/tuturials2/blog/connecting-sensors-opcua/" rel="alternate" type="text/html" title="Private LoRaWAN to OPC-UA" /><published>2024-05-19T15:10:15-05:00</published><updated>2024-05-19T15:10:15-05:00</updated><id>/tuturials2/blog/connecting-sensors-opcua</id><content type="html" xml:base="/tuturials2/blog/connecting-sensors-opcua/"><![CDATA[<h3 id="mission-lorawan-temperature-data-to-python-graph">Mission: LoRaWAN Temperature Data to Python Graph</h3>
 
-<p><img src="/assets/images/lora-opc-python.svg" alt="LoRaWAN to OPC UA" /></p>
+<p><img src="/tuturials2/assets/images/lora-opc-python.svg" alt="LoRaWAN to OPC UA" /></p>
 
 <p><span style="background-color: #ffff0054">
 <strong>Note:</strong> This tutorial uses the iQunet Industrial Edge Server.
@@ -41,7 +41,7 @@ via MQTT [<a href="https://mqtt.org/">mqtt.org</a>]. The application server decr
 the binary sensor data and stores the measurement in a database, where it can
 be retrieved by, for example, <strong>dashboarding software</strong> for visualization.</p>
 
-<p><img src="/assets/images/typical-lora.svg" alt="Typical LoRaWAN setup" /></p>
+<p><img src="/tuturials2/assets/images/typical-lora.svg" alt="Typical LoRaWAN setup" /></p>
 <figcaption>figure 1: Typical LoRaWAN setup for large networks</figcaption>
 <p>This multi-step process can be quite challenging for a simple one-time setup,
 particularly when integrating software from different vendors.</p>
@@ -58,7 +58,7 @@ to the <strong>local database</strong> and can be accessed via various protocols
 MQTT, CSV or the internal web interface.
 <br /></p>
 
-<p><img src="/assets/images/iqunet-lora.svg" alt="iQunet LoRaWAN setup" /></p>
+<p><img src="/tuturials2/assets/images/iqunet-lora.svg" alt="iQunet LoRaWAN setup" /></p>
 <figcaption>figure 2: iQunet single-server LoRaWAN setup for
 medium size networks (e.g. 250 devices)</figcaption>
 <p>In this tutorial, the <strong><span style="background-color:#ff9494">red route</span></strong>
@@ -73,7 +73,7 @@ and unpack</strong> the payload and store the data in the <strong>built-in datab
 Measurements related to a single LoRaWAN sensor are organized under the
 corresponding DevEUI node of that sensor in the OPC-UA node tree (see figure 3).</p>
 
-<p><img src="/assets/images/iqunet-opcua.svg" alt="iQunet OPC-UA" /></p>
+<p><img src="/tuturials2/assets/images/iqunet-opcua.svg" alt="iQunet OPC-UA" /></p>
 <figcaption>figure 3: iQunet embedded OPC-UA server API</figcaption>
 <hr />
 
@@ -84,7 +84,7 @@ of an <strong>SX1302 LoRa Radio</strong> receiver, an iQunet Edge SBC (database 
 server) and an (optional) 4G mobile router. The router is the temporary
 placeholder for -for example- a company VLAN.</p>
 
-<p><img src="/assets/images/iqunet-setup.svg" alt="iQunet Base Setup" /></p>
+<p><img src="/tuturials2/assets/images/iqunet-setup.svg" alt="iQunet Base Setup" /></p>
 <figcaption>figure 4: The setup with SX1302 concentrator module,
 OPC-UA server and mobile network</figcaption>
 
@@ -95,7 +95,7 @@ automatically generate and exchange the network and application security keys
 between sensor and the target application.
 <br /></p>
 
-<p><img src="/assets/images/lsn50v2-s31.svg" alt="Dragino LSN50v2-S31" width="400" /></p>
+<p><img src="/tuturials2/assets/images/lsn50v2-s31.svg" alt="Dragino LSN50v2-S31" width="400" /></p>
 <figcaption>figure 5: Dragino LSN50v2-S31 LoRaWAN temperature and humidity sensor.</figcaption>
 <hr />
 
@@ -105,7 +105,7 @@ dashboard of the iQunet server shall display a new LoRaWAN device under the LoRa
 Radio Module. The devEUI found on the LSN50 sensor should match the devEUI as
 displayed in the dashboard.</p>
 
-<p><img src="/assets/images/iqunet-new-lorawan.svg" alt="iQunet Dashboard new LoRaWAN" /></p>
+<p><img src="/tuturials2/assets/images/iqunet-new-lorawan.svg" alt="iQunet Dashboard new LoRaWAN" /></p>
 <figcaption>figure 6: The LoRaWAN sensor is detected and a new device LoRaWAN
 device is created in the sensor tree.</figcaption>
 
@@ -116,7 +116,7 @@ The AppKey (also known as the JOIN key) is only used once during the setup of
 the device.
 <br /></p>
 
-<p><img src="/assets/images/iqunet-key-lorawan.svg" alt="iQunet LoRaWAN AppKey" /></p>
+<p><img src="/tuturials2/assets/images/iqunet-key-lorawan.svg" alt="iQunet LoRaWAN AppKey" /></p>
 <figcaption>figure 7: Setup of the LoRaWAN Application Key in the dashboard.</figcaption>
 
 <p>If the <strong>Application Key</strong> is correct, the sensor and the iQunet server will
@@ -129,7 +129,7 @@ data, in this particular case temperature and humidity.
 <br /></li>
 </ul>
 
-<p><img src="/assets/images/iqunet-sessionkeys-lorawan.svg" alt="iQunet LoRaWAN Session Keys" /></p>
+<p><img src="/tuturials2/assets/images/iqunet-sessionkeys-lorawan.svg" alt="iQunet LoRaWAN Session Keys" /></p>
 <figcaption>figure 8: Secure Session keys are calculated from the Application Key.</figcaption>
 
 <p>After all OTAA keys have been successfully set up, the actual <strong>uplink of
@@ -140,7 +140,7 @@ adjust and display all relevant information. For example, the LSN50v2-S31 will
 transmit temperature, humidity and battery power, as shown in figure 9:
 <br /></p>
 
-<p><img src="/assets/images/iqunet-lsn50.svg" alt="iQunet custom dashboard" /></p>
+<p><img src="/tuturials2/assets/images/iqunet-lsn50.svg" alt="iQunet custom dashboard" /></p>
 <figcaption>figure 9: Dashboard will adjust to the sensor type.</figcaption>
 
 <p>When available, sensor settings can be adjusted via the <strong>LoRaWAN downlink</strong>
@@ -157,7 +157,7 @@ data can be retrieved via the OPC-UA “<strong>historical access</strong>” ex
 
 <p>Click the OPC-UA tab in the dashboard to open the embedded OPC-UA browser (figure 10).</p>
 
-<p><img src="/assets/images/iqunet-dashboard-opcua.svg" alt="iQunet OPC-UA browser" /></p>
+<p><img src="/tuturials2/assets/images/iqunet-dashboard-opcua.svg" alt="iQunet OPC-UA browser" /></p>
 <figcaption>figure 10: Embedded OPC-UA client and browser.</figcaption>
 <hr />
 
@@ -198,14 +198,14 @@ as UaExpert, a popular OPC-UA client developed by Unified Automation
 server at address 192.168.10.101, port 4840. Both encrypted and non-encrypted
 connections are supported.</p>
 
-<p><img src="/assets/images/uaexpert-setup.svg" alt="UaExpert Setup" /></p>
+<p><img src="/tuturials2/assets/images/uaexpert-setup.svg" alt="UaExpert Setup" /></p>
 <figcaption>figure 11: Unified Automation UaExpert OPC-UA client connection setup.</figcaption>
 
 <p>When the UaExpert client is successfully connected to the iQunet OPC-UA server,
 direct access is provided to all realtime measurements, metadata and historical
 values as stored in the local database.</p>
 
-<p><img src="/assets/images/uaexpert-history.svg" alt="UaExpert History view" /></p>
+<p><img src="/tuturials2/assets/images/uaexpert-history.svg" alt="UaExpert History view" /></p>
 <figcaption>figure 12: Unified Automation UaExpert OPC-UA client: history view.</figcaption>
 <hr />
 
@@ -270,7 +270,7 @@ Three external libraries are used for this:
 
 </code></pre></div></div>
 
-<p><img src="/assets/images/temperature_plot.png" alt="Temperature Plot" /></p>
+<p><img src="/tuturials2/assets/images/temperature_plot.png" alt="Temperature Plot" /></p>
 <figcaption>figure 13: Smoothed temperature plot using opcua-asyncio and matplotlib.</figcaption>
 <hr />
 

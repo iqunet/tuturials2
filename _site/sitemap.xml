@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://0.0.0.0:4000/blog/connecting-sensors-opcua/</loc>
+<loc>/tuturials2/blog/connecting-sensors-opcua/</loc>
 <lastmod>2024-05-19T15:10:15-05:00</lastmod>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/about/</loc>
+<loc>/tuturials2/about/</loc>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/categories/</loc>
+<loc>/tuturials2/categories/</loc>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/</loc>
+<loc>/tuturials2/</loc>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/tags/</loc>
+<loc>/tuturials2/tags/</loc>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/posts/</loc>
+<loc>/tuturials2/posts/</loc>
 </url>
 </urlset>
