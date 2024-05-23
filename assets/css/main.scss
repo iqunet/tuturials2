@@ -27,13 +27,13 @@ hr {
 
 .toc {
   ul {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
 .highlighter-rouge div {
-  font-size: .85em;
   margin-top: 1.5em;
+  font-size: .8em;
 }
 
 .author__avatar {
@@ -44,10 +44,26 @@ hr {
   }
 }
 
+.sidebar__right {
+  margin-left: 2em
+}
+
 .sidebar {
-  width: calc(200px - 1em);
+  width: calc(12em - 1em);
+  opacity: 1;
 }
 
 .page {
-  width: calc(100% - 200px);
+  width: calc(100% - 12em);
+  display: flex;
+  flex-direction: row;
+}
+
+.description_2 {
+  width: 95%;
+  padding: 1em;
+  font-size: 0.6em;
+  font-style: italic;
+  background: #929cd31f;
+  border-radius: 16px;
 }
