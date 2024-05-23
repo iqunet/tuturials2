@@ -36,7 +36,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Welcome to Jekyll!",
-        "excerpt":"HELLO2 You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site...","categories": ["blog"],
+        "excerpt":"HELLO3 You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site...","categories": ["blog"],
         "tags": ["Jekyll","update"],
         "url": "/tuturials2/blog/welcome-to-jekyll/",
         "teaser": null
