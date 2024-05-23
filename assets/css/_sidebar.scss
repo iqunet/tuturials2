@@ -1,0 +1,15 @@
+---
+---
+
+.author__avatar {
+  
+  display: table-cell;
+  vertical-align: top;
+  width: 36px;
+  height: 36px;
+
+  img {
+    max-width: 110px;
+    border-radius: none;
+  }
+}

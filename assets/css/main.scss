@@ -1,0 +1,38 @@
+---
+---
+
+@import "minimal-mistakes";
+
+.page__content {
+  p, ul, dl {
+    font-size: 0.8rem;
+  }
+}
+
+.toc {
+  ul {
+    font-size: 0.7rem;
+  }
+}
+
+.highlighter-rouge {
+  div {
+    font-size: 1em;
+  }
+}
+
+.author__avatar {
+  
+  img {
+    border-radius: 0;
+    border: 0;
+  }
+}
+
+.sidebar {
+  width: calc(200px - 1em);
+}
+
+.page {
+  width: calc(100% - 200px);
+}

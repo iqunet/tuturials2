@@ -1,4 +1,285 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-05-23T11:53:22-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">iQunet Tutorials: OPC-UA | MQTT | Modbus | LoRaWAN</title><subtitle>iQunet offers ready-to-use products for your digitalization projects, ensuring a quick rollout of your monitoring solutions.  We also support custom engineering requests to meet your specific needs.</subtitle><author><name>{&quot;avatar&quot;=&gt;&quot;/assets/images/iqunet_logo_bgwhite.svg&quot;, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;iQunet.com&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-house&quot;, &quot;url&quot;=&gt;&quot;https://iqunet.com&quot;}, {&quot;label&quot;=&gt;&quot;LinkedIn&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-linkedin&quot;, &quot;url&quot;=&gt;&quot;https://linkedin.com/company/iqunet/&quot;}, {&quot;label&quot;=&gt;&quot;YouTube&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-youtube&quot;, &quot;url&quot;=&gt;&quot;https://www.youtube.com/channel/UCOPGTm7iW8Xh6ZJP8UBq_nQ&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;, &quot;url&quot;=&gt;&quot;https://github.com/iqunet&quot;}]}</name></author><entry><title type="html">Private LoRaWAN to OPC-UA</title><link href="http://0.0.0.0:4000/blog/connecting-sensors-opcua/" rel="alternate" type="text/html" title="Private LoRaWAN to OPC-UA" /><published>2024-05-19T15:10:15-05:00</published><updated>2024-05-19T15:10:15-05:00</updated><id>http://0.0.0.0:4000/blog/connecting-sensors-opcua</id><content type="html" xml:base="http://0.0.0.0:4000/blog/connecting-sensors-opcua/"><![CDATA[<h3 id="mission-lorawan-temperature-data-to-python-graph">Mission: LoRaWAN Temperature Data to Python Graph</h3>
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.1 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Private LoRaWAN to OPC-UA - iQunet Tutorials: OPC-UA | MQTT | Modbus | LoRaWAN</title>
+<meta name="description" content="Mission: LoRaWAN Temperature Data to Python Graph">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="iQunet Tutorials: OPC-UA | MQTT | Modbus | LoRaWAN">
+<meta property="og:title" content="Private LoRaWAN to OPC-UA">
+<meta property="og:url" content="http://0.0.0.0:4000/blog/connecting-sensors-opcua/">
+
+
+  <meta property="og:description" content="Mission: LoRaWAN Temperature Data to Python Graph">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-05-19T15:10:15-05:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://0.0.0.0:4000/blog/connecting-sensors-opcua/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          iQunet Tutorials: OPC-UA | MQTT | Modbus | LoRaWAN
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Posts</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://0.0.0.0:4000/">
+        <img src="/assets/images/iqunet_logo_bgwhite.svg" alt="" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://0.0.0.0:4000/" itemprop="url"></a>
+    </h3>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://iqunet.com" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-house" aria-hidden="true"></i><span class="label">iQunet.com</span></a></li>
+          
+        
+          
+            <li><a href="https://linkedin.com/company/iqunet/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCOPGTm7iW8Xh6ZJP8UBq_nQ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/iqunet" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Private LoRaWAN to OPC-UA">
+    <meta itemprop="description" content="Mission: LoRaWAN Temperature Data to Python Graph">
+    <meta itemprop="datePublished" content="2024-05-19T15:10:15-05:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://0.0.0.0:4000/blog/connecting-sensors-opcua/" itemprop="url">Private LoRaWAN to OPC-UA
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#mission-lorawan-temperature-data-to-python-graph">Mission: LoRaWAN Temperature Data to Python Graph</a></li><li><a href="#typical-lorawan-network-infrastructure">Typical LoRaWAN Network Infrastructure</a></li><li><a href="#a-single-board-private-lorawan-setup">A Single-Board Private LoRaWAN Setup</a></li><li><a href="#the-opc-ua-server-interface">The OPC-UA server interface</a></li><li><a href="#lorawan-hardware-setup">LoRaWAN Hardware Setup</a></li><li><a href="#connecting-a-new-lorawan-sensor">Connecting a new LoRaWAN sensor</a></li><li><a href="#embedded-opc-ua-client">Embedded OPC-UA Client</a></li><li><a href="#uaexpert-opc-ua-client">UaExpert OPC-UA Client</a></li><li><a href="#post-processing-opc-ua-data-with-python">Post-processing OPC-UA data with Python</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
+            </nav>
+          </aside>
+        
+        <h3 id="mission-lorawan-temperature-data-to-python-graph">Mission: LoRaWAN Temperature Data to Python Graph</h3>
 
 <p><img src="/assets/images/lora-opc-python.svg" alt="LoRaWAN to OPC UA" /></p>
 
@@ -305,4 +586,84 @@ For further exploration and support, check out our
 <a href="https://iqunet.com/resources/case-studies/case-study-1-international-airport/"><strong>case studies</strong></a>
 or reach out to our <a href="https://iqunet.com/contact/"><strong>support team</strong></a>.
 Happy data monitoring!
-</span></p>]]></content><author><name>{&quot;avatar&quot;=&gt;&quot;/assets/images/iqunet_logo_bgwhite.svg&quot;, &quot;links&quot;=&gt;[{&quot;label&quot;=&gt;&quot;iQunet.com&quot;, &quot;icon&quot;=&gt;&quot;fas fa-fw fa-house&quot;, &quot;url&quot;=&gt;&quot;https://iqunet.com&quot;}, {&quot;label&quot;=&gt;&quot;LinkedIn&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-linkedin&quot;, &quot;url&quot;=&gt;&quot;https://linkedin.com/company/iqunet/&quot;}, {&quot;label&quot;=&gt;&quot;YouTube&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-youtube&quot;, &quot;url&quot;=&gt;&quot;https://www.youtube.com/channel/UCOPGTm7iW8Xh6ZJP8UBq_nQ&quot;}, {&quot;label&quot;=&gt;&quot;GitHub&quot;, &quot;icon&quot;=&gt;&quot;fab fa-fw fa-github&quot;, &quot;url&quot;=&gt;&quot;https://github.com/iqunet&quot;}]}</name></author><category term="blog" /><summary type="html"><![CDATA[Mission: LoRaWAN Temperature Data to Python Graph]]></summary></entry></feed>
+</span></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#blog" class="page__taxonomy-item p-category" rel="tag">blog</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-05-19T15:10:15-05:00">May 19, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="http://0.0.0.0:4000">iQunet Tutorials: OPC-UA | MQTT | Modbus | LoRaWAN</a></div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
