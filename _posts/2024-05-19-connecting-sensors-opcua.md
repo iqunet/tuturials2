@@ -154,7 +154,8 @@ At this point, the sensor has successfully joined the private LoRaWAN network
 and incoming measurements are stored into the **local database**. Historical
 data can be retrieved via the OPC-UA "**historical access**" extension.
 
-Click the OPC-UA tab in the dashboard to open the embedded OPC-UA browser (figure 10).
+Click the OPC-UA tab in the dashboard to open the embedded OPC-UA browser,
+as shown in figure 10:
 
 ![iQunet OPC-UA browser]({{ site.baseurl }}/assets/images/iqunet-dashboard-opcua.svg)
 <figcaption>figure 10: Embedded OPC-UA client and browser.</figcaption>
